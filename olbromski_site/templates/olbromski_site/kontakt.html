@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Kontakt - FHU Olbromski{% endblock title %}
+
+{% block body %}
+{% include 'hero.html' with header="Kontakt" %}
+  <section class="contact__page container">
+    <div class="contact__page__intro">
+      <h2>Zachęcamy do kontaktu</h2>
+    </div>
+    <div class="columns flex">
+      <div class="col data flex">
+        <div class="contact__page__adress">
+          <strong>Biuro Handlowe</strong>
+          <p>Al. Grunwaldzka 256A (salon Subaru)</p>
+          <p>80-314 Gdańsk</p>
+          <a href="tel:+48585525117">+48 58 552 51 17</a>
+          <a href="mailt:biuro@olbromski.pl">biuro@olbromski.pl</a>
+        </div>
+        <div class="contact__page__data">
+          <strong>Dział Handlowy</strong>
+          <div class="employee__data">
+            <p>Dariusz Olbromski</p>
+            <a href="tel:+48602277028">+48 602 277 028</a>
+            <a href="mailt:biuro@olbromski.pl">biuro@olbromski.pl</a>
+          </div>
+          <div class="employee__data">
+            <p>Ryszard Janicki</p>
+            <a href="tel:+48535339828">+48 535 339 828</a>
+            <a href="mailt:ryszard.janicki@olbromski.pl">ryszard.janicki@olbromski.pl</a>
+          </div>
+        </div>
+      </div>
+      <div class="col map flex">
+        <strong>Zobacz nas na mapie</strong>
+        <div id="map">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Form -->
+  {% include 'contact-form.html' with header="Napisz do nas. Zaproponujemy rozwiązanie szyte na miarę <span>Twojej</span> firmy." description="" %}
+  {% endblock body %}

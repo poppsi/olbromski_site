@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Systemy KLEENOIL - FHU Olbromski{% endblock title %}
+
+{% block body %}
+{% include 'hero.html' with header="Systemy KLEENOIL" %}
+<section class="article flex container">
+  <div class="article__section">
+    <div class="article__info">
+      <h2 class="article__subheading">Systemy KLEENOIL</h2>
+      <p>KLEENOIL system typu By-pass jest innowacyjnym rozwiązaniem, które pozwala na utrzymanie czystości użytkowanego oleju. Dzięki temu czas pracy na płynie eksploatacyjnym wydłuża się i nie jest konieczna jego wymiana. Ponadto system skutecznie monitoruje zawartość oleju, co wpływa na mniejszą częstotliwość awarii i ograniczenie ubytków płynu.</p>
+      <p>System KLEENOIL opiera się na działaniu opatentowanych filtrów wysokiej jakości, które wykonywane są z pulpy celulozowej. Ponadto system przepuszcza i filtruje tylko część oleju przepływającego przez układ hydrauliczny. Połączenie wyjątkowego materiału i sposobu przepuszczania oleju sprawia, że system skutecznie zatrzymuje bardzo małe cząsteczki o wielkości do 1 mikrona. Umożliwia także całkowite usunięcie wody.</p>
+      <h3>Podsumowanie korzyści utrzymywania czystości użytkowanego oleju</h3>  
+      <p>
+        <ul>
+          <li>Dłuższa żywotność filtra i związany z tym niski koszt utrzymania;</li>
+          <li>Wydłużony czas przydatności oleju do użytku nawet do 10 razy w przypadku oleju hydraulicznego i do 5 razy przy olejach silnikowych;</li>
+          <li>Brak szkodliwych zanieczyszczeń i wody w olejach;</li>
+          <li>Brak przestojów związanych z koniecznością usuwania przepracowanego oleju;</li>
+          <li>Czysty olej minimalizuje ilość awarii, przestojów i wydłuża żywotność maszyn.</li>
+        </ul>
+      </p>
+      <p>System KLEENOIL służy do usuwania wody i zanieczyszczeń stałych z większości płynów eksploatacyjnych oraz olejów. Można stosować go w układach hydraulicznych oraz silnikowych. Sprawdza się przy czyszczeniu osadów w olejach mineralnych czy olejach napędowych, a także płynach chłodniczych opartych na glikolu.</p>
+      <p>KLEENOIL wspiera działanie różnego typu systemów, które stosowane są do zapobiegania, konserwacji, a nawet przeciwdziałania skutkom zanieczyszczeń w oleju. Może być stosowany  przy najnowocześniejszych układach, gdzie zapewnia skuteczniejsze czyszczenie i monitorowanie stanu płynu.</p>
+    </div>
+    <div class="article__image">
+      <img src="{% static '' %}" alt="">
+    </div>
+  </div>
+</section>
+{% endblock body %}

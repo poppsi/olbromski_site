@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Wklady filtracyjne Kleenoil - FHU Olbromski{% endblock title %}
+
+{% block body %}
+{% include 'hero.html' with header="Filtry KLEENOIL" %}
+<section class="article flex container">
+  <div class="article__section">
+    <div class="article__info">
+      <h2 class="article__subheading">Wkłady filtracyjne KLEENOIL</h2>
+      <p>Stosowane są do usuwania zanieczyszczeń z olejów napędowych, a także płynów eksploatacyjnych wykorzystywanych w układach smarowania, przekładniowych i hydraulicznych. Wkłady wykonywane są w trzech wariantach wymiarowych z pulpy drzewnej iglastej.</p>
+      <p>Wkłady KLEENOIL to filtry odpowiedzialne za usuwanie zanieczyszczeń i wody z różnego typu olejów. To opatentowany filtr dobrej jakości, który spełnia wymagania norm ISO przyjętych dla filtrów olejów hydraulicznych i silnikowych. Warto pamiętać, że tylko oryginalne filtry zapewniają odpowiednią skuteczność filtrowania płynów eksploatacyjnych.</p>
+      <p>Sercem filtra jest wkład wykonany z masy drzewnej w postaci nici, które są gęsto nawijane na siebie. Całość utrzymuje obudowa materiałowa, która także jest częścią przepuszczającą płyny. W ciasnej strukturze włókien osadzają się stałe elementy zanieczyszczające olej. Przylegają do struktury włókna, zatrzymują się wewnątrz, a dalej płynie już czysty olej. Papier, z którego wykonane są filtry, chłonie także cząsteczki wilgoci, które dostają się do oleju w różnych sytuacjach. One także zatrzymywane są w strukturze filtra, z kolei duże cząsteczki oleju przepuszczane są dalej.</p>
+      <p>Usuwanie wody i zanieczyszczeń z oleju sprawia, że preparat na dłużej zachowuje pierwotne parametry ustalone przez producenta. Brak wody oznacza wolniejsze tworzenie się kwasów w oleju. Z kolei zanieczyszczenia stałe i kurz usuwane systematycznie pozwalają na zachowanie w oleju odpowiedniej proporcji związków ochronnych. Dzięki temu środek przez dłuższy czas będzie stanowił ochronę silnika lub układu hydraulicznego.</p>
+      <p>Filtry KLEENOIL zatrzymują wszystkie popularne zabrudzenia, które mogą pojawić się w eksploatowanych olejach. Jednocześnie pozwalają na swobodny przepływ cząstek, które są odpowiedzialne za utrzymanie odpowiedniego smarowania. Takie środki jak dyspergatory, detergenty, środki smarne czy dezaktywatory metali utrzymują się w zawiesinie i nie osiadają na filtrze.</p>
+      <p>Ponadto filtr KLEENOIL może być wyposażony we wkład polipropylenowy, który sprawdzi się głównie przy płynach chłodniczych. To jedyna rodzima firma, która dysponuje filtrem wykorzystywanym do czyszczenia płynów na bazie glikolu czy emulsji chłodzących wykorzystywanych przy obróbce skrawaniem. Taki filtr nie zatrzymuje wody, która jest jednym ze składników glikolu wodnego. W tych substancjach odpowiada za usuwanie drobnych cząsteczek o wielkości nawet mniejszej niż 1 mikron. To pozwala na wielokrotnie dłuższą eksploatację płynów, ograniczenie do minimum konieczności ich wymiany, a w efekcie obniża koszty eksploatacji urządzeń.</p>
+    </div>
+    <div class="article__image">
+      <img src="{% static '' %}" alt="">
+    </div>
+  </div>
+</section>
+{% endblock body %}

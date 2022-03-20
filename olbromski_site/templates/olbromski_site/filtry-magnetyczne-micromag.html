@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Filtry magnetyczyne Micromag - FHU Olbromski{% endblock title %}
+
+{% block body %}
+{% include 'hero.html' with header="Filtry Micromag" %}
+<section class="article flex container">
+  <div class="article__section">
+    <div class="article__info">
+      <h2 class="article__subheading">Filtry magnetyczne Micromag</h2>
+      <p>Micromag to najnowsza generacja filtra magnetycznego, używanego do usuwania zanieczyszczeń żelaznych lub paramagnetycznych z płynów i jest w stanie filtrować na poziomie submikronowym przy minimalnym spadku ciśnienia, urządzenie jest szczególnie skuteczne w przypadku olejów i chłodziw do obrabiarek.</p>
+      <p>W przeciwieństwie do konwencjonalnych filtrów, Micromag nie jest wrażliwy na wielkość cząstek, jeśli cząstki są magnetyczne, bez względu na to, jak małe (nawet submikronowe) Micromag je usunie! System zawiera najpotężniejszy, naturalny materiał magnetyczny ziem rzadkich do wytwarzania ekstremalnych pól magnetycznych usuwających metalowe zanieczyszczenia z oleju. Systemy te są często używane jako filtry wstępne, aby ograniczyć zanieczyszczenia docierające do kolejnych urządzeń filtrujących.</p>
+      <p>Filtracja magnetyczna może być stosowana do usuwania 100% cząstek żelaznych do poziomów submikronowych ze wszystkich płynów przemysłowych, w których problemem jest zanieczyszczenie cieczy żelazem i paramagnetyczne.</p>
+      <p>Usunięcie tych cząstek zapewnia dłuższą żywotność płynu, poprawia wykończenie powierzchni produktów, zwiększa dokładność komponentów i zmniejsza zużycie maszyn i narzędzi. W przeciwieństwie do innych rodzajów filtracji, po zainstalowaniu filtracji magnetycznej nie ma stałych kosztów, ponieważ „nie ma materiałów eksploatacyjnych”.</p>
+    </div>
+    <div class="article__image">
+      <img src="{% static '' %}" alt="">
+    </div>
+  </div>
+</section>
+{% endblock body %}

@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FHU Olbromski{% endblock title %}
+
+{% block body %}
+  <!-- Main Page Hero -->
+  <section style="background-image: url('{% static 'olbromski_site/images/czysty-olej.jpg' %}')" class="hero container overlay">
+    <div class="hero__content">
+      <h1>Gospodarka olejowa Twojej firmy</h1>
+      <p>Doradzamy</p>
+      <br />
+      <p>Monitorujemy</p>
+      <br />
+      <p>Zapewniamy</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services flex container">
+    <div class="service">
+      <a href="{% url 'filtracja_oleju_page' %}"></a>
+      <img src="{% static 'olbromski_site/images/filtracja-icon.png' %}" alt="" />
+      <h1 class="service__title">Mikrofiltracja oleju KLEENOIL&reg</h1>
+      <p class="service__description">
+        Mikrofiltracja pozwala przedłużyć nie tylko żywotność oleju, ale także całego układu hydrualicznego. Mikrofiltracja to oszczędności wynikające z rzadszego zakupu oleju. Zapewniamy całodobowy serwis przez 7 dni w tygodniu.
+      </p>
+    </div>
+    <div class="service">
+      <a href="{% url 'filtracja_systemy_mobilne_page' %}"></a>
+      <img src="{% static 'olbromski_site/images/urzadzenie-icon.png' %}" alt="" />
+      <h1 class="service__title">
+        Urządzenia filtrujące i filtry KLEENOIL&reg
+      </h1>
+      <p class="service__description">
+        Jesteśmy autoryzowanym dystrybutorem KLEENOIL w  województwie Pomorskim i Zachodniopomorskim. Oferujemy filtry oraz mobilne systemy filtrujące, które pozwalają na filtrowanie oleju w różnych miejscach w zależności od potrzeb. 
+      </p>
+    </div>
+    <div class="service">
+      <a href="{% url 'badania_oleju_page' %}"></a>
+      <img src="{% static 'olbromski_site/images/badanie-icon.png' %}" alt="" />
+      <h1 class="service__title">Badania laboratoryjne oleju</h1>
+      <p class="service__description">
+        Wykonujemy pomiary zanieczyszczenia oleju w warunkach laboratoryjnych. W krótkim czasie uzyskujemy dokładny wynik badań dzięki czemu możemy wskazać konieczność filtracji lub wymiany oleju w układzie hydrualicznym maszyny.
+      </p>
+    </div>
+    <div class="service">
+      <a href="{% url 'sprzedaz_oleju_page' %}"></a>
+      <img src="{% static 'olbromski_site/images/sprzedaz-icon.png' %}" alt="" />
+      <h1 class="service__title">Sprzedaż olejów silnikowych</h1>
+      <p class="service__description">
+        Od ponad 20 lat jesteśmy uznaną i obdarzoną zaufaniem hurtownią sprzedaży oleju silnikowego i hydrualicznego w Polsce północnej. Oferujemy oleje silnikowe i hydrauliczne wiodących, międzynarodowych marek jak Total, Gulf, Midland i innych marek olejowych.
+      </p>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="clients flex container">
+    <div class="clients__intro">
+      <h1>Nasi Klienci</h1>
+      <p><strong>Mamy okazję obsługiwać wyjątkowe firmy.</strong></p>
+    </div>
+    <div class="clients__map flex">
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/adkonis.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/budokop.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/chojnice-zwirownia.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/dekpol.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/ekodolina.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/ekozuk.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/elwoz-eco.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/elwoz.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/eurobud.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/ginter.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/gruba.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/gs-hydro.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/gsg-towers.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/in-bul.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/jozef-plotka.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/kroso.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/lafarge.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/lotos.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/mikrostyk.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/mpgkim.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/mtm.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/navigator.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/oltrans.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/pgk-goleniow.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/recykling2.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/richert.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/sondex.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/stena-recykling.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/weber.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/wodjar.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/wodociagi.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/zaklad-uslug-komunalnych.png' %}" alt=""></div>
+      <div class="client flex"><img src="{% static 'olbromski_site/images/202020/zwirownia-ng.png' %}" alt=""></div>
+    </div>
+    <div class="clients__carousel">
+      <button class="carousel__btn btn__left" id="btn__left"><img class="" src="{% static 'olbromski_site/images/left-arrow.png' %}" alt=""></button>
+      <div class="carousel__container flex">
+        <ul class="carousel__track">
+          <li class="carousel__slide flex">
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/adkonis.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/budokop.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/chojnice-zwirownia.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/dekpol.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/ekodolina.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/ekozuk.png' %}" alt=""></div>
+          </li>
+          <li class="carousel__slide flex">
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/elwoz-eco.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/elwoz.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/eurobud.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/ginter.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/gruba.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/gs-hydro.png' %}" alt=""></div>
+          </li>
+          <li class="carousel__slide flex">
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/gsg-towers.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/in-bul.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/jozef-plotka.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/kroso.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/lafarge.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/lotos.png' %}" alt=""></div>
+          </li>
+          <li class="carousel__slide flex">
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/mikrostyk.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/mpgkim.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/mtm.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/navigator.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/oltrans.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/pgk-goleniow.png' %}" alt=""></div>
+          </li>
+          <li class="carousel__slide flex">
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/recykling2.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/richert.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/sondex.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/stena-recykling.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/weber.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/wodjar.png' %}" alt=""></div>
+          </li>
+          <li class="carousel__slide flex">
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/wodociagi.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/zaklad-uslug-komunalnych.png' %}" alt=""></div>
+            <div class="client flex"><img src="{% static 'olbromski_site/images/202020/zwirownia-ng.png' %}" alt=""></div>
+          </li>
+        </ul>
+      </div>
+      <button class="carousel__btn btn__right" id="btn__right"><img class="" src="{% static 'olbromski_site/images/right-arrow.png' %}" alt=""></button>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  {% include 'contact-form.html' with header="Poszukujesz optymalnego rozwiązania dla <span>Twojej</span> firmy?" description="Doradzamy jak utrzymać układy hydrauliczne, maszyny przemysłowe, budowlane i rolnicze wolne od zanieczyszczeń. Stale monitorujemy stan gospodarki olejowej Twojej firmy. W razie nagłej potrzeby czy awarii zapewniamy całodobowe wsparcie." %}
+{% endblock body %}

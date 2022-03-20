@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dziękujemy :){% endblock title %}
+
+{% block body %}
+  <section class="dziekujemy__page flex container">
+    <div class="dziekujemy__text">
+      <h2>Dziękujemy za wiadomość :)</h2>
+      <h2>odpowiemy z prędkością rakiety!</h2>
+    </div>
+    <div>
+      <img src="{% static 'olbromski_site/images/rakieta.png' %}" alt="" class="icon" />
+    </div>
+  </section>
+  <!-- Contact Form -->
+  {% endblock body %}

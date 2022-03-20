@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Badania oleju - FHU Olbromski{% endblock title %}
+
+{% block body %}
+{% include 'hero.html' with header="Badania oleju" %}
+<section class="article flex container">
+  <div class="article__section">
+    <div class="article__info">
+      <h2 class="article__subheading">Laboratoryjne badania oleju i płynów eksploatacyjnych - glikole</h2>
+      <p>Badanie oleju i płynów jest bardzo ważnym składnikiem użytkowania oleju. Pozwala monitorować i zawczasu przewidzieć potrzebę filtracji oleju lub w ostateczności jego wymianę. Badania pozwalają zoptymalizować gospodarkę olejową i co za tym idzie obniżyć koszty związane z jej utrzymaniem.</p>
+      <p>Wykonujemy badania związane z czystością oleju i zawartością wody w nim jak. Współpracujemy ze specjalistycznym laboratorium analitycznym, które wykonuje wszystkie badania związane z olejami i glikolami.</p>
+    </div>
+    <div class="article__image">
+      <img src="{% static '' %}" alt="">
+    </div>
+  </div>
+</section>
+{% endblock body %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sprzedaż oleju - FHU Olbromski{% endblock title %}
+
+{% block body %}
+{% include 'hero.html' with header="Sprzedaż oleju" %}
+<section class="article flex container">
+  <div class="article__section">
+    <div class="article__info">
+      <p>Każdy samochód do pracy potrzebuje dobrej jakości oleju silnikowego. Olej samochodowy zapewnia dobre smarowanie ruchomych elementów jednostki napędowej, sprawiając, że silnik pracuje prawidłowo. Regularna wymiana oleju jest niezbędna, jeśli zależy nam na wydłużeniu życia samochodu. Nasza hurtownia olei silnikowych, sprowadza tylko produkty najbardziej sprawdzonych marek na rynku. Dbamy o to, by nasi klienci otrzymywali jakościowe i sprawdzone produkty takich marek jak Gulf, Midland czy Total.</p>
+      <h3>Gulf – marka z ogromnym doświadczeniem</h3>
+      <p>Marka Gulf posiada ponad stuletnie doświadczenie na rynku motoryzacyjnym. Przez ten czas zaufały jej miliony klientów na całym świecie. Pierwsza markowa stacja benzynowa Gulf została otwarta w USA w roku 1913. Zapoczątkowało to historię jednej z najbardziej rozpoznawalnych marek, jeśli chodzi o produkcję oleju samochodowego i nie tylko. W XX wieku marka Gulf stworzyła kilka prestiżowych kampanii marketingowych, a dodatkowo była sponsorem lądowania Apollo na księżycu. Dziś logo marki znane jest już na całym świecie, a kojarzy się głównie z wysoką jakością i innowacyjnością.</p>
+      <p>Gulf promuje markę, korzystając z wielkiego formatu imprez wyścigowych, które sponsoruje. Podobnie zresztą wygląda to w przypadku czołowych zespołów, biorących w tych imprezach udział. Dzięki temu marka Gulf jest rozpoznawalna na całym świecie. W roku 2008 nawiązano współpracę z Aston Martin Racing. AMR do dziś stosuje oleje samochodowe marki Gulf, które zresztą w pełni rekomenduje. Nasza hurtownia olejów silnikowych oferuje właśnie produkty tej klasowej marki.</p>
+      <h3>Midland - europejski spadkobierca amerykańskiej legendy Quaker State</h3>
+      <p>Marka Midland należy do firmy Oel Brack A. G. To bardzo zasłużona na rynku motoryzacyjnym firma, która istnieje od ponad 125 lat. W skład produkcji firmy wchodzą między innymi oleje samochodowe i smary. Marka ta od 1938 roku była europejskim przedstawicielem amerykańskiego koncernu olejowego Quaker State Corporation, która jednocześnie jest najstarszą firmą olejowa na świecie. Hasłem rozpoznawczym marki jest „olej szwajcarskiej jakości” – a jak wiadomo nikt tak nie zna się na jakości i precyzji, jak szwajcarzy.</p>
+      <h3>Total - francuski gigant</h3>
+      <p>Nasza hurtownia olejów silnikowych posiada również wiele produktów sprawdzonej firmy Total. Total to francuskie przedsiębiorstwo petrochemiczne, posiadające w swojej ofercie jedne z najlepszych olejów na rynku. Marka może pochwalić się swoją obecnością w ponad 130 krajach. Marka Total została założona przez rząd francuski w roku 1924. Pomysłodawcą projektu był ówczesny premier Francji Raymond Poincare. Początkowo firma nazywała się Compagnie française des pétroles i w skrócie nazywano ją CFP. Nazwę zmieniono dopiero w roku 1985, na Total CFP. Sześć lat później doszło do kolejnej zmiany i pozostał jedynie pierwszy człon nazwy. Total oferuje oleje silnikowe i inne produkty do samochodów osobowych, ciężarowych czy nawet łodzi motorowych. Jedna z linii marki – Quartz, zawiera oleje, które spełniają normy wyznaczone przez Mercedes-Benz, BWM i Volkswagen.</p>
+      <h4>Jeśli szukasz produktów jednej z wymienionej wyżej marek, nasza hurtownia olei samochodowych posiada dokładnie to, czego potrzebujesz.</h4>
+      <p>Z chęcią udzielimy Państwu fachowych porad w doborze oferowanych przez nas produktów. Dążymy do tego, aby nasi odbiorcy byli zawsze usatysfakcjonowani. Dzięki naszym staraniom udało nam się zdobyć zaufanie licznych klientów, do których możesz dołączyć i Ty – czekamy na Ciebie!</p>
+    </div>
+    <div class="article__image">
+      <img src="{% static '' %}" alt="">
+    </div>
+  </div>
+</section>
+{% endblock body %}

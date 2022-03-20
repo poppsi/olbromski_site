@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}O nas - FHU Olbromski{% endblock title %}
+
+{% block body %}
+{% include 'hero.html' with header="O nas" %}
+<section class="article flex container">
+  <div class="article__section">
+    <div class="article__info">
+      <h2 class="article__subheading">Wspieramy przemysł</h2>
+        <p>Nasza firma jest firmą rodzinną, dla której głównym celem jest zadowolenie klientów. W ofercie mamy oleje silnikowe, przemysłowe, przekładniowe, hydrauliczne, oleje dla rolnictwa, oleje motocyklowe, morskie, do łodzi sportowych i rekreacyjnych jak i również do pojazdów zabytkowych.</p>
+        <p>Z chęcią udzielimy Państwu fachowych porad w doborze oferowanych przez nas produktów. Dążymy do tego, aby nasi odbiorcy byli zawsze usatysfakcjonowani. Dzięki naszym staraniom udało nam się zdobyć zaufanie licznych klientów, do których możesz dołączyć i Ty – czekamy na Ciebie!</p>
+        <p>Nasza firma, wychodząc naprzeciw oczekiwaniom swoich kontrahentów wprowadziła do swojej oferty serwis olejowy — obejmujący m.in. mikrofiltrację, filtrowanie oleju hydraulicznego, przekładniowego i wielu innych. Wykonując usługę lub sprzedając agregat filtracyjny, zapewniamy najwyższe standardy. Szczególną uwagę przywiązujemy do monitoringu oleju na czystość — należy on do naszych obowiązków. Według najnowszych wytycznych sprzęty budowlane i przemysłowe wymagają czystego oleju — wg. NAS kl. min. 7 lub niżej!</p>
+        <p>W atrakcyjnych cenach wykonamy również wszelkiego rodzaju badania oleju wraz z ich analizą oraz monitoring zużycia poszczególnych elementów urządzenia. Badania, prowadzone są przez specjalistyczne laboratorium, a w szczególnych przypadkach — próbki wysyłamy do centrali w Wielkiej Brytanii.</p>      </div>
+    <div class="article__image">
+      <img src="{% static '' %}" alt="">
+    </div>
+  </div>
+  <div class="article__section">
+    <div class="article__info">
+      <h2 class="article__subheading">Wspólnie z KLEENOIL</h2>
+        <p>Od lat współpracujemy z firmą KLEENOIL, której założenie w 1976 roku przez Briana Cornetta było przełomem — zwłaszcza dla armii izraelskiej. Był to czas, kiedy Izrael szukał skutecznego sposobu, aby przedłużyć żywotność oleju w samochodach ciężarowych i innych pojazdach z układami hydraulicznymi.</p>
+        <p>KLEENOIL obecnie, to główny dostawca produktów do dystrybutorów technicznych w 16 krajach naszego globu — m. in. w Kanadzie, Stanach Zjednoczonych, RPA czy w Afryce. Od ponad ćwierć wieku firma KLEENOIL z sukcesem produkuje i sprzedaje wszelkiego rodzaju systemy filtrów by-pass (tzw. by-pass Oil Filtration Systems). Filtry KLEENOIL, pozwalają nie tylko wydłużyć czas między wymianą oleju czy usuwać wodę z dużą dokładnością, ale za pomocą mikrofiltracji eliminują cząsteczki stałe — nawet tak małe, jak 1 μm!  Firma zdajac sobie sprawę z rosnących wymagań klientów, odnośnie czystości oleju hydraulicznego — rozpoczęła również produkcję niestandardowych elementów filtrujących. Cały proces produkcyjny odbywa się w Wielkiej Brytanii.</p>
+        <p>Agregaty filtracyjne KLEENOIL od lat uważane są w tej branży za najlepsze na rynku! Jako jedyne posiadają specjalny i niezwykle silny filtr magnetyczny, który wyłapuje wszystkie opiłki w oleju — jest to najdokładniejszy sposób diagnostyki tego, co dzieje się danym układzie hydraulicznym. Filtr wiskozowy z kolei zatrzymuje pozostałe zanieczyszczenia i opiłki w oleju, a przede wszystkim absorbuje wodę — stanowi ona największe zagrożenie dla każdego rodzaju oleju. Co więcej, agregaty filtracyjne posiadają dopuszczenia bezpieczeństwa CE na całe urządzenie filtracyjne — nie tylko na jego poszczególne elementy, jak większość konkurencyjnych, tańszych produktów. Jest to szczególnie ważne, przy obsłudze może bowiem dojść do wielu nieprzewidzianych sytuacji.</p>
+        <p>Jesteśmy mobilni i elastyczni — działamy w trybie 24/7. Świadczymy usługi serwisowe na terenie całej Polski. Jesteśmy jednocześnie hurtownią olei samochodowych i przemysłowych — chętnie doradzimy zarówno w wyborze konkretnego oleju, jak i dostarczymy produkty we wskazane przez kontrahenta miejsce.</p>      </div>
+    <div class="article__image">
+      <img src="{% static '' %}" alt="">
+    </div>
+  </div>
+</section>
+{% endblock body %}

@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles and font -->
+    <link rel="stylesheet" href="{% static 'olbromski_site/style.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'olbromski_site/images/olbromski-favicon.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title content -->
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+</head>
+<body>
+    <!-- Header menu -->
+    <header class="header">
+        <div class="jc-sb header__top flex container">
+          <!-- Header Logos -->
+          <div class="header__logos flex">
+            <div class>
+                <a href="/"><img src="{% static 'olbromski_site/images/olbromski-logo.png' %}" alt="Olbromski" class="logo__olbromski" /></a>
+            </div>
+            <div class>
+                <a href="/"><img src="{% static 'olbromski_site/images/kleenoil-logo.png' %}" alt="Kleenoil" class="logo__kleenoil" /></a>
+            </div>
+          </div>
+          <nav class="flex jc-sb ai-cent header__navigation">
+            <!-- Hamburger Btn -->
+            <a id="btn_hamburger" href="#" class="header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="header__links flex">
+                <a href="{% url 'o_nas_page' %}">O nas</a>
+                <a href="#" class="with__sub__menu">Filtracja oleju</a>
+                <div class="sub__menu flex">
+                  <a href="{% url 'filtracja_oleju_page' %}">Na czym to polega?</a>
+                  <a href="{% url 'filtracja_systemy_kleenoil_page' %}">Systemy KLEENOIL</a>
+                  <a href="{% url 'filtracja_systemy_kleenoil_typu_by_pass_page' %}">System KLEENOIL typu By-Pass</a>
+                  <a href="{% url 'filtracja_systemy_mobilne_page' %}">Systemy mobilne</a>
+                  <a href="{% url 'filtracja_filtry_magnetyczne_micromag_page' %}">Filtry magnetyczne Micromag</a>
+                  <a href="{% url 'filtracja_wklady_filtracyjne_kleenoil_page' %}">Wkłady filtracyjne KLEENOIL</a>
+                </div>
+                <a href="{% url 'badania_oleju_page' %}">Badania oleju</a>
+                <a href="{% url 'sprzedaz_oleju_page' %}">Sprzedaż oleju</a>
+                {% comment %} <a href="#">Blog</a> {% endcomment %}
+                <a href="{% url 'kontakt_page' %}">Kontakt</a>
+            </div>
+          </nav>
+        </div>
+        <!-- Mobile & Tablet Menu-->
+        <div class="header__menu">
+            <a href="{% url 'o_nas_page' %}">O nas</a>
+            <a href="#" class="with__sub__menu">Filtracja oleju</a>
+            <div class="sub__menu flex">
+              <a href="{% url 'filtracja_oleju_page' %}">Na czym to polega?</a>
+              <a href="{% url 'filtracja_systemy_kleenoil_page' %}">Systemy KLEENOIL</a>
+              <a href="{% url 'filtracja_systemy_kleenoil_typu_by_pass_page' %}">System KLEENOIL typu By-Pass</a>
+              <a href="{% url 'filtracja_systemy_mobilne_page' %}">Systemy mobilne</a>
+              <a href="{% url 'filtracja_filtry_magnetyczne_micromag_page' %}">Filtry magnetyczne Micromag</a>
+              <a href="{% url 'filtracja_wklady_filtracyjne_kleenoil_page' %}">Wkłady filtracyjne KLEENOIL</a>
+            </div>
+            <a href="{% url 'badania_oleju_page' %}">Badania oleju</a>
+            <a href="{% url 'sprzedaz_oleju_page' %}">Sprzedaż oleju</a>
+            {% comment %} <a href="#">Blog</a> {% endcomment %}
+            <a href="{% url 'kontakt_page' %}">Kontakt</a>
+        </div>
+        </header>
+
+    <!-- Body content -->
+    {% block body %}{% endblock body %}    
+    <!-- Footer -->
+    <footer class="footer flex container">
+        <div class="footer__adress flex">
+          <div>
+            <img src="{% static 'olbromski_site/images/map.png' %}" alt="" class="icon" />
+          </div>
+          <div>
+            <p>FHU Olbromski</p>
+            <p>al. Grunwaldzka 256a, 80-314 Gdańsk</p>
+            <p>NIP: 5841090429</p>
+          </div>
+        </div>
+        <div class="footer__contact flex">
+          <div class="contact__data flex">
+            <img src="{% static 'olbromski_site/images/email.png' %}" alt="" class="icon" />
+            <a href="mailt:biuro@olbromski.pl">biuro@olbromski.pl</a>
+          </div>
+          <div class="contact__data flex">
+            <img src="{% static 'olbromski_site/images/telephone.png' %}" alt="" class="icon" />
+            <a href="tel:+48585525117">+48 58 552 51 17</a>
+          </div>
+          <div class="contact__data flex">
+            <img src="{% static 'olbromski_site/images/facebook.png' %}" alt="" class="icon" />
+            <a href="https://www.facebook.com/mikrofiltracja">Nasz Fanpage</a>
+          </div>
+        </div>
+      </footer>
+    <!-- JS Scripts -->
+    <script src="{% static 'olbromski_site/script.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmKawaE8H2LT3OSPEYvRYvIvNYgQ2KmAM&callback=initMap" async></script>
+</body>
+</html>

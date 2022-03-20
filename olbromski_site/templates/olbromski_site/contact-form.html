@@ -1,0 +1,26 @@
+<section class="contact__form flex container">
+    <div class="contact__descr">
+      <h1>{{ header }}</h1>
+      <p>{{ description }}</p>
+    </div>
+    <div class="contact__inputs">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form__item">
+          <label for="name">Imię <span>*</span> </label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form__item">
+          <label for="email">Email <span>*</span> </label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form__item">
+          <label for="message">Wiadomość <span>*</span> </label>
+          <textarea name="message" cols="30" rows="10" required></textarea>
+        </div>
+        <div class="submit__button">
+          <input type="submit" id="submit__button" value="Wyślij">
+        </div>
+      </form>
+    </div>
+  </section>
