@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 from pickle import FALSE
 from tkinter import E
+import os
 import environ
 
 
@@ -30,7 +31,8 @@ environ.Env.read_env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = env('SECRET_KEY')
+# SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # Google Maps API key
 
@@ -47,7 +49,7 @@ EMAIL_USE_TLS = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
   'poppsi.pythonanywhere.com',
