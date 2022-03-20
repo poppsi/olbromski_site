@@ -51,7 +51,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
   'poppsi.pythonanywhere.com',
-  'olbromski.pl'
+  'olbromski.pl',
+  '127.0.0.1'
 ]
 
 # Application definition
