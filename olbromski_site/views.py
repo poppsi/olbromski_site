@@ -3,9 +3,14 @@ from urllib import request
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
+from django.conf import settings
 
 
 def home(request):
+  api_keys = {
+      'gmaps_api_key': settings.GOOGLE_MAPS_API_KEY
+  } 
+
   if request.method == "POST":
     name = request.POST['name']
     email = request.POST['email']
@@ -20,7 +25,7 @@ def home(request):
 
     return HttpResponseRedirect('dziekujemy')
   else:
-    return render(request, 'index.html')
+    return render(request, 'index.html', api_keys)
 
     
 

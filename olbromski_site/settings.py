@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from pickle import FALSE
+from tkinter import E
 import environ
 
 
@@ -19,6 +20,7 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialise environment variables
+
 env = environ.Env()
 environ.Env.read_env()
 
@@ -27,9 +29,24 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
 SECRET_KEY = env('SECRET_KEY')
 
+# Google Maps API key
+
+GOOGLE_MAPS_API_KEY = env('GOOGLE_MAPS_API_KEY')
+
+# Email settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = [
@@ -138,12 +155,3 @@ STATIC_ROOT = BASE_DIR / 'olbromski_site' / 'staticfiles'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Email settings
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'olbromskipl@gmail.com'
-EMAIL_HOST_PASSWORD = 'qsewwgwykczxmjrb'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
