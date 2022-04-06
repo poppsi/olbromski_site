@@ -53,7 +53,7 @@ EMAIL_USE_TLS = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
   'poppsi.pythonanywhere.com',

@@ -75,3 +75,37 @@ def kontakt(request):
 
 def dziekujemy(request):
   return render(request, 'dziekujemy.html')
+
+# SEO pages
+def filtracja_hydrauliczna(request):
+  return render(request, 'filtracja-hydrauliczna.html')
+
+def srebrne_opilki_w_oleju(request):
+  return render(request, 'srebrne-opilki-w-oleju.html')
+
+def zlote_opilki_w_oleju(request):
+  return render(request, 'zlote-opilki-w-oleju.html')
+
+def oczyszczanie_oleju_przepracowanego(request):
+  return render(request, 'oczyszczanie-oleju-przepracowanego.html')
+
+def jak_oczyscic_olej_przepracowany(request):
+  return render(request, 'jak-oczyscic-olej-przepracowany.html')
+
+def jak_przefiltrowac_olej(request):
+  return render(request, 'jak-przefiltrowac-olej.html')
+
+def olej_hydrauliczny_jak_mleko(request):
+  return render(request, 'olej-hydrauliczny-jak-mleko.html')
+
+def agregat_do_filtracji_oleju_hydraulicznego(request):
+  return render(request, 'agregat-do-filtracji-oleju-hydraulicznego.html')
+
+def opilki_w_oleju(request):
+  return render(request, 'opilki-w-oleju.html')
+
+def klasa_czystosci_oleju(request):
+  return render(request, 'klasa-czystosci-oleju.html')
+
+def filtracja_oleju_przepracowanego(request):
+  return render(request, 'filtracja-oleju-przepracowanego.html')
