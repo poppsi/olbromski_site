@@ -9,14 +9,13 @@
     <!-- Styles and font -->
     <link rel="stylesheet" href="{% static 'olbromski_site/style.css' %}" />
     <link rel="icon" type="image/x-icon" href="{% static 'olbromski_site/images/olbromski-favicon.png' %}">
+    <link rel="preload" as="image" href="{% static 'olbromski_site/images/czysty-olej.jpg' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Preload hero image-->
-    <link rel="preload" as="image" href="{% static 'olbromski_site/images/czysty-olej.jpg' %}">
     <!-- Title content -->
     <title>
         {% block title %}{% endblock title %}
