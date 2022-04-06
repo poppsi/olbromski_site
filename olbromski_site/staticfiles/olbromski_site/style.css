@@ -645,6 +645,10 @@ footer .icon {
   padding: 0 1.5rem;
 }
 
+.article__section li {
+  color: var(--light_grey);
+}
+
 /* -------------------------------------------------------- *//* Kontakt *//* -------------------------------------------------------- */
 .contact__page strong {
   margin: 0;
