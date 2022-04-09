@@ -55,15 +55,12 @@ sub_menu_link[1].addEventListener("click", function() {
 btn_hamburger.addEventListener("click", function() {
     console.log("Click")
     if (header.classList.contains("open")) {
-        body.classList.remove("noscroll")
 
         header.classList.remove("open") // Close menu
 
         header_menu.classList.remove("fade_in")
         header_menu.classList.add("fade_out")
     } else {
-        body.classList.add("noscroll")
-
         header.classList.add("open") // Open menu
 
         header_menu.classList.remove("fade_out")
