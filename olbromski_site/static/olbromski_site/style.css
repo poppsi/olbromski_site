@@ -284,9 +284,9 @@ a:hover {
 }
 
 /* Noscroll state of Mobile & Tablet Menu */
-/* .noscroll {
-  overflow: hidden;
-} */
+.noscroll {
+  overflow: visible;
+}
 /* -------------------------------------------------------- */
 /* Hero Section */
 
