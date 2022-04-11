@@ -3,31 +3,36 @@ from urllib import request
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.conf import settings
+from .forms import ContactForm
 
 
 def home(request):
-  api_keys = {
-      'gmaps_api_key': settings.GOOGLE_MAPS_API_KEY
-  } 
+  form = ContactForm()
+
+  context = {
+    'form':form,
+    'recaptcha_public_key':settings.RECAPTCHA_PUBLIC_KEY,
+  }
 
   if request.method == "POST":
-    name = request.POST['name']
-    email = request.POST['email']
-    message = request.POST['message']
+    form = ContactForm(request.POST)
 
-    send_mail(
-      "Masz nowe zgłoszenie ze strony olbromski.pl", #Subject
-      f"Imię: {name}\nEmail: {email}\nWiadomość: {message}", #Message
-      "olbromskipl@gmail.com", #From
-      ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
-      )
+    if form.is_valid():
+      name = form.cleaned_data['client_name']
+      email = form.cleaned_data['client_email']
+      message = form.cleaned_data['client_message']
 
-    return HttpResponseRedirect('dziekujemy')
+      send_mail(
+        "Masz nowe zgłoszenie ze strony olbromski.pl", #Subject
+        f"Imię: {name}\nE-mail: {email}\nWiadomość: {message}", #Message
+        "olbromskipl@gmail.com", #From
+        ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
+        )
+      return HttpResponseRedirect('dziekujemy')
   else:
-    return render(request, 'index.html', api_keys)
-
-    
+    return render(request, 'index.html', context)
 
 def o_nas(request):
   return render(request, 'o-nas.html')
@@ -57,21 +62,31 @@ def sprzedaz_oleju(request):
   return render(request, 'sprzedaz-oleju.html')
 
 def kontakt(request):
-  if request.method == "POST":
-    name = request.POST['name']
-    email = request.POST['email']
-    message = request.POST['message']
+  form = ContactForm()
 
-    send_mail(
-      "Masz nowe zgłoszenie ze strony olbromski.pl", #Subject
-      f"Imię: {name}\nEmail: {email}\nWiadomość: {message}", #Message
-      "olbromskipl@gmail.com", #From
-      ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
-      )
-      
-    return HttpResponseRedirect('dziekujemy')
+  context = {
+    'form':form,
+    'recaptcha_public_key':settings.RECAPTCHA_PUBLIC_KEY,
+    'gmaps_api_key': settings.GOOGLE_MAPS_API_KEY,
+  }
+
+  if request.method == "POST":
+    form = ContactForm(request.POST)
+
+    if form.is_valid():
+      name = form.cleaned_data['client_name']
+      email = form.cleaned_data['client_email']
+      message = form.cleaned_data['client_message']
+
+      send_mail(
+        "Masz nowe zgłoszenie ze strony olbromski.pl", #Subject
+        f"Imię: {name}\nE-mail: {email}\nWiadomość: {message}", #Message
+        "olbromskipl@gmail.com", #From
+        ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
+        )
+      return HttpResponseRedirect('dziekujemy')
   else:
-    return render(request, 'kontakt.html')
+    return render(request, 'kontakt.html', context)
 
 def dziekujemy(request):
   return render(request, 'dziekujemy.html')

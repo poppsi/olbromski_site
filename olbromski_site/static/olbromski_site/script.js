@@ -35,7 +35,6 @@ sub_menu[0].addEventListener("mouseleave", function() {
 
 // Mobile & Tablet Submenu
 sub_menu_link[1].addEventListener("click", function() {
-    console.log("Click")
     if (sub_menu_link[1].classList.contains("open")) {
         sub_menu_link[1].classList.remove("open")
         sub_menu[1].classList.remove("open")
@@ -53,7 +52,6 @@ sub_menu_link[1].addEventListener("click", function() {
 
 // Hamburger Menu
 btn_hamburger.addEventListener("click", function() {
-    console.log("Click")
     if (header.classList.contains("open")) {
 
         header.classList.remove("open") // Close menu

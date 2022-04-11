@@ -25,6 +25,13 @@
         type="text/css"
       />
     </noscript>
+    <!-- reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("form").submit();
+      }
+    </script>
     <!-- Title content -->
     <title>
         {% block title %}{% endblock title %}
@@ -105,7 +112,7 @@
         <div class="footer__contact flex">
           <div class="contact__data flex">
             <img src="{% static 'olbromski_site/images/email.png' %}" alt="" class="icon" />
-            <a href="mailt:biuro@olbromski.pl">biuro@olbromski.pl</a>
+            <a href="mailto:biuro@olbromski.pl">biuro@olbromski.pl</a>
           </div>
           <div class="contact__data flex">
             <img src="{% static 'olbromski_site/images/telephone.png' %}" alt="" class="icon" />

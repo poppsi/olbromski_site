@@ -4,22 +4,13 @@
       <p>{{ description }}</p>
     </div>
     <div class="contact__inputs">
-      <form action="" method="POST">
+      <form id="form" action="" method="POST">
         {% csrf_token %}
-        <div class="form__item">
-          <label for="name">Imię <span>*</span> </label>
-          <input type="text" name="name" required>
-        </div>
-        <div class="form__item">
-          <label for="email">Email <span>*</span> </label>
-          <input type="email" name="email" required>
-        </div>
-        <div class="form__item">
-          <label for="message">Wiadomość <span>*</span> </label>
-          <textarea name="message" cols="30" rows="10" required></textarea>
-        </div>
+        {{ form }}
+        <!-- reCAPTCHA input -->
         <div class="submit__button">
-          <input type="submit" id="submit__button" value="Wyślij">
+          {% comment %} <input type="submit" id="submit__button" value="Wyślij"> {% endcomment %}
+          <input class="g-recaptcha" data-sitekey="{{recaptcha_public_key}}" data-callback="onSubmit" type="submit" id="submit__button" value="Wyślij">
         </div>
       </form>
     </div>
