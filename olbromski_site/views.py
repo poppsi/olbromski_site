@@ -31,6 +31,8 @@ def home(request):
         ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
         )
       return HttpResponseRedirect('dziekujemy')
+    else:
+      return render(request, 'index.html', context)
   else:
     return render(request, 'index.html', context)
 
