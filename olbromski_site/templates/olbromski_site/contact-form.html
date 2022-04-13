@@ -7,11 +7,10 @@
       <form id="form" action="" method="POST">
         {% csrf_token %}
         {{ form }}
-        <!-- reCAPTCHA input -->
         <div class="submit__button">
-          {% comment %} <input type="submit" id="submit__button" value="Wyślij"> {% endcomment %}
-          <input class="g-recaptcha" data-sitekey="{{recaptcha_public_key}}" data-callback="onSubmit" type="submit" id="submit__button" value="Wyślij">
+          <input class="g-recaptcha" data-sitekey="{{ recaptcha_public_key }}" data-callback="onSubmit" type="submit" id="submit__button" value="Wyślij">
         </div>
       </form>
+
     </div>
   </section>

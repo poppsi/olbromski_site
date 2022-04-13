@@ -9,13 +9,6 @@ from .forms import ContactForm
 
 
 def home(request):
-  form = ContactForm()
-
-  context = {
-    'form':form,
-    'recaptcha_public_key':settings.RECAPTCHA_PUBLIC_KEY,
-  }
-
   if request.method == "POST":
     form = ContactForm(request.POST)
 
@@ -23,7 +16,6 @@ def home(request):
       name = form.cleaned_data['client_name']
       email = form.cleaned_data['client_email']
       message = form.cleaned_data['client_message']
-
       send_mail(
         "Masz nowe zgłoszenie ze strony olbromski.pl", #Subject
         f"Imię: {name}\nE-mail: {email}\nWiadomość: {message}", #Message
@@ -31,9 +23,13 @@ def home(request):
         ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
         )
       return HttpResponseRedirect('dziekujemy')
-    else:
-      return render(request, 'index.html', context)
-  else:
+
+  else:    
+    form = ContactForm()
+    context = {
+      'form':form,
+      'recaptcha_public_key':settings.RECAPTCHA_PUBLIC_KEY,
+    }
     return render(request, 'index.html', context)
 
 def o_nas(request):
