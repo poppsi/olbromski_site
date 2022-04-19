@@ -589,6 +589,12 @@ a:hover {
   color: white;
 }
 
+.form__alert {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 112, 0, 0.8);
+  color: white;
+}
 
 /* -------------------------------------------------------- */
 /* Footer */

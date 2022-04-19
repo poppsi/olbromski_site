@@ -4,6 +4,11 @@
       <p>{{ description }}</p>
     </div>
     <div class="contact__inputs">
+      {% if messages %}
+        {% for msg in messages %}
+          <div class="form__alert">{{ msg }}</div>
+        {% endfor %}  
+      {% endif %}
       <form id="form" action="" method="POST">
         {% csrf_token %}
         {{ form }}
@@ -11,6 +16,5 @@
           <input class="g-recaptcha" data-sitekey="{{ recaptcha_public_key }}" data-callback="onSubmit" type="submit" id="submit__button" value="Wyślij">
         </div>
       </form>
-
     </div>
   </section>

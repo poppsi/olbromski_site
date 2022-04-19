@@ -1,7 +1,8 @@
 from unicodedata import name
 from urllib import request
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.conf import settings
@@ -11,7 +12,6 @@ from .forms import ContactForm
 def home(request):
   if request.method == "POST":
     form = ContactForm(request.POST)
-
     if form.is_valid():
       name = form.cleaned_data['client_name']
       email = form.cleaned_data['client_email']
@@ -23,7 +23,11 @@ def home(request):
         ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
         )
       return HttpResponseRedirect('dziekujemy')
-
+    else:
+      # Form error handling
+      messages.warning(request, "Uzupełnij brakujące pola i prześlij formularz ponownie.")
+      return HttpResponseRedirect(request.path_info)
+  # Render form
   else:    
     form = ContactForm()
     context = {
@@ -60,14 +64,6 @@ def sprzedaz_oleju(request):
   return render(request, 'sprzedaz-oleju.html')
 
 def kontakt(request):
-  form = ContactForm()
-
-  context = {
-    'form':form,
-    'recaptcha_public_key':settings.RECAPTCHA_PUBLIC_KEY,
-    'gmaps_api_key': settings.GOOGLE_MAPS_API_KEY,
-  }
-
   if request.method == "POST":
     form = ContactForm(request.POST)
 
@@ -83,7 +79,15 @@ def kontakt(request):
         ["biuro@olbromski.pl", "olbromski.filip@gmail.com"], #To
         )
       return HttpResponseRedirect('dziekujemy')
+    else:
+       pass 
   else:
+    form = ContactForm()
+    context = {
+      'form':form,
+      'recaptcha_public_key':settings.RECAPTCHA_PUBLIC_KEY,
+      'gmaps_api_key': settings.GOOGLE_MAPS_API_KEY,
+    }
     return render(request, 'kontakt.html', context)
 
 def dziekujemy(request):
