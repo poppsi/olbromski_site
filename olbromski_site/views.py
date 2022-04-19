@@ -66,12 +66,10 @@ def sprzedaz_oleju(request):
 def kontakt(request):
   if request.method == "POST":
     form = ContactForm(request.POST)
-
     if form.is_valid():
       name = form.cleaned_data['client_name']
       email = form.cleaned_data['client_email']
       message = form.cleaned_data['client_message']
-
       send_mail(
         "Masz nowe zgłoszenie ze strony olbromski.pl", #Subject
         f"Imię: {name}\nE-mail: {email}\nWiadomość: {message}", #Message
@@ -80,7 +78,10 @@ def kontakt(request):
         )
       return HttpResponseRedirect('dziekujemy')
     else:
-       pass 
+      # Form error handling
+      messages.warning(request, "Uzupełnij brakujące pola i prześlij formularz ponownie.")
+      return HttpResponseRedirect(request.path_info)
+  # Render form
   else:
     form = ContactForm()
     context = {
